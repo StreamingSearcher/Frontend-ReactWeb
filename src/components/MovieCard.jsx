@@ -17,8 +17,10 @@ const styles = {
         borderRadius: '5px',
         padding: '10px',
         margin: '10px',
-        width: '200px',
+        width: '100%',
+        maxWidth : '200px',
         boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+        justifySelf : 'center'
     },
     title: {
         fontSize: '18px',

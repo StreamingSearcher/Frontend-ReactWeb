@@ -10,11 +10,10 @@ const HomePage = () => {
         // Por ahora, solo estamos actualizando el estado title
         setTitle(event.target.elements.title.value);
     };
-
+ 
     return (
         <div style={styles.home}>
-        
-            <form onSubmit={handleSubmit}>
+            <form style={styles.form} onSubmit={handleSubmit}>
                 <input
                     type="text"
                     placeholder="search movies"
@@ -30,7 +29,18 @@ const HomePage = () => {
 
 const styles = {
     home : {
-        width : '90vw'
+        padding : '1rem',
+        display : 'flex',
+        flexDirection : 'column',
+        justifyContent : 'start',
+        minHeight : '95vh',
+        alignItems : 'center'
+
+    },
+    form : {
+        width : '100%',
+        display : 'flex',
+        justifyContent : 'center'
     }
 }
 

@@ -9,7 +9,11 @@ const MovieCardContainer =   ({title}) => {
     variables: { title : title }
     });
 
-    console.log('Datos de la consulta por título:', dataTitle);
+    if(loadingTitle){
+        return (<>
+            <div><h2>Cargando...</h2></div>
+        </>)
+    }
 
     return ( 
         <> 
@@ -31,11 +35,11 @@ const MovieCardContainer =   ({title}) => {
 
 const styles = {
     container : {
-
+        width: '100%',
         display : 'grid',
         justifyContent : 'center',
         gridTemplateColumns : 'repeat(auto-fill, minmax(200px, 1fr))',
-        gap : '50px',
+        gap : '25px',
         padding : '0 10px'
     }
 };
